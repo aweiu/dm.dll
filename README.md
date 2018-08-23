@@ -21,11 +21,14 @@ npm install dm.dll --save
 ```
 
 ## API
-目前只封装了大漠插件最常用的功能，API太多，待整理...[完整说明文档见此](https://github.com/aweiu/dm.dll/raw/master/%E5%A4%A7%E6%BC%A0%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.CHM)
+本插件的api基本同[大漠说明文档](https://github.com/aweiu/dm.dll/raw/master/%E5%A4%A7%E6%BC%A0%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.CHM)保持一致，稍有改动的部分也会在后文指出，所以你可以对照它来查看对应api的详细说明
 
-如果你需要的api本插件没有提供，你可以通过如下方式直接调用dm.dll的api
+目前只封装了大漠插件最常用的功能，API太多，待整理...不过如果你需要的api本插件没有提供，你可以通过如下方式直接调用大漠插件的api
 ```
-import dm from 'dm.dll'
+// node
+// const dm = require('dm.dll')
+// typescript
+import dm = require('dm.dll')
 console.log(dm.dll.ver())
 ```
 
@@ -33,6 +36,7 @@ console.log(dm.dll.ver())
 * getPath (): string
 * setPath (path: string): [DmRet](types/types.d.ts#L18)
 * setErrorDisplay (flag: [ErrorDisplay](types/types.d.ts#L33)): [DmRet](types/types.d.ts#L18)
+    > 同大漠插件的SetShowErrorMsg
 
 ### 窗口
 * findWindow (className: string, title: string, parentHWnd?: number): number
