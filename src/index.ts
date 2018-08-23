@@ -33,7 +33,7 @@ function getDM () {
 }
 
 const dm = getDM()
-export default {
+export = {
   dll: dm,
   getPath (): string {
     return dm.GetPath()
@@ -196,3 +196,4 @@ export default {
     }
   }
 }
+
