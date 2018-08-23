@@ -1,0 +1,38 @@
+{
+  "name": "dm.dll",
+  "version": "0.0.9",
+  "description": "JS版按键精灵(大漠插件)",
+  "keywords": [
+    "robot",
+    "mouse",
+    "keyboard",
+    "wqm",
+    "dm"
+  ],
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aweiu/dm.js.git"
+  },
+  "author": "aweiu",
+  "license": "ISC",
+  "dependencies": {
+    "winax": "^1.0.13"
+  },
+  "devDependencies": {
+    "@types/node": "^10.3.0",
+    "tslint": "^5.10.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.9.1"
+  },
+  "engines": {
+    "node": "<=10.8.0"
+  },
+  "os": [
+    "win32"
+  ]
+}
