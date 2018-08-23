@@ -43,4 +43,4 @@ declare const _default: {
     findStr(x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): FindRet | undefined;
     getScreenSize(): Size;
 };
-export default _default;
+export = _default;

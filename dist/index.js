@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const winax = require("winax");
 const child_process_1 = require("child_process");
 const path = require("path");
@@ -13,7 +12,7 @@ function getDM() {
     }
 }
 const dm = getDM();
-exports.default = {
+module.exports = {
     dll: dm,
     getPath() {
         return dm.GetPath();
