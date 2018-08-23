@@ -2,7 +2,7 @@
 基于[大漠插件](http://www.dmwebsite.net/)封装的JS版按键精灵！从此可以用JS写自动脚本了~
 
 ## 使用
-建议使用[typescript](https://www.tslang.cn/)来调用本插件，插件内置了很多有用类型，你可以获得更好的代码提示
+建议使用[typescript](https://www.tslang.cn/)来调用本插件，插件内置了很多[有用类型](types/types.d.ts)，你可以获得更好的代码提示
 > 请务必使用管理员身份运行node，因为大漠插件的注册和某些后台绑定模式需要管理员权限
 
 ### 环境
