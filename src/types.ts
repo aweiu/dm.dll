@@ -19,13 +19,13 @@ export interface Size {
   height: number
 }
 
-export enum DmRet {Failed, Success}
+export const enum DmRet {Failed, Success}
 
-export enum FindDir {LeftToRightAndTopToBottom, LeftToRightAndBottomToTop, RightToLeftAndTopToBottom, RightToLeftAndBottomToTop, CenterToOutSide, TopToBottomAndLeftToRight, TopToBottomAndRightToLeft, BottomToTopAndLeftToRight, BottomToTopAndRightToLeft}
+export const enum FindDir {LeftToRightAndTopToBottom, LeftToRightAndBottomToTop, RightToLeftAndTopToBottom, RightToLeftAndBottomToTop, CenterToOutSide, TopToBottomAndLeftToRight, TopToBottomAndRightToLeft, BottomToTopAndLeftToRight, BottomToTopAndRightToLeft}
 
-export enum ErrorDisplay {Hidden, Show}
+export const enum ErrorDisplay {Hidden, Show}
 
-export enum GetWindowFlag {
+export const enum GetWindowFlag {
   Parent,
   FirstChild,
   First,
@@ -36,7 +36,7 @@ export enum GetWindowFlag {
   Top
 }
 
-export enum WindowState {
+export const enum WindowState {
   Close,
   Active,
   MinimizeAndInactive,
@@ -53,7 +53,7 @@ export enum WindowState {
   ForceExit
 }
 
-export enum KeyState {
+export const enum KeyState {
   Up,
   Down
 }
