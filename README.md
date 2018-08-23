@@ -1,4 +1,4 @@
-# dm.js
+# dm.dll
 基于[大漠插件](http://www.dmwebsite.net/)封装的JS版按键精灵！从此可以用JS写自动脚本了~
 
 ## 使用
@@ -17,15 +17,15 @@
 
 ### 安装
 ```
-npm install dm.js --save
+npm install dm.dll --save
 ```
 
 ## API
-目前只封装了大漠插件最常用的功能，API太多，待整理...[完整说明文档见此](https://github.com/aweiu/dm.js/raw/master/%E5%A4%A7%E6%BC%A0%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.CHM)
+目前只封装了大漠插件最常用的功能，API太多，待整理...[完整说明文档见此](https://github.com/aweiu/dm.dll/raw/master/%E5%A4%A7%E6%BC%A0%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E.CHM)
 
 如果你需要的api本插件没有提供，你可以通过如下方式直接调用dm.dll的api
 ```
-import dm from 'dm.js'
+import dm from 'dm.dll'
 console.log(dm.dll.ver())
 ```
 
