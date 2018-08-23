@@ -1,13 +1,14 @@
 {
   "name": "dm.dll",
-  "version": "0.0.9",
+  "version": "1.0.0",
   "description": "JS版按键精灵(大漠插件)",
   "keywords": [
     "robot",
     "mouse",
     "keyboard",
     "wqm",
-    "dm"
+    "dm",
+    "dm.js"
   ],
   "main": "dist/index.js",
   "typings": "types/index.d.ts",
