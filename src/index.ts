@@ -119,6 +119,9 @@ export = {
   moveWindow (hWnd: number, x: number, y: number): DmRet {
     return dm.MoveWindow(hWnd, x, y)
   },
+  setWindowSize (hWnd: number, width: number, height: number): DmRet {
+    return dm.SetWindowSize(hWnd, width, height)
+  },
   setWindowState (hWnd: number, state: WindowState): DmRet {
     return dm.SetWindowState(hWnd, state)
   },
