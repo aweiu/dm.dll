@@ -29,6 +29,7 @@ declare const _default: {
     getPointWindow(x: number, y: number): number;
     getClientSize(hWnd: number): Size | undefined;
     moveWindow(hWnd: number, x: number, y: number): DmRet;
+    setWindowSize(hWnd: number, width: number, height: number): DmRet;
     setWindowState(hWnd: number, state: WindowState): DmRet;
     sendPaste(hWnd: number): DmRet;
     sendString(hWnd: number, content: string): DmRet;

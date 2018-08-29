@@ -98,6 +98,9 @@ module.exports = {
     moveWindow(hWnd, x, y) {
         return dm.MoveWindow(hWnd, x, y);
     },
+    setWindowSize(hWnd, width, height) {
+        return dm.SetWindowSize(hWnd, width, height);
+    },
     setWindowState(hWnd, state) {
         return dm.SetWindowState(hWnd, state);
     },
