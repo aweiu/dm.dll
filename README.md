@@ -39,7 +39,7 @@ console.log(dm.dll.ver())
     > 同大漠插件的SetShowErrorMsg
 
 ### 窗口
-* findWindow (className: string, title: string, parentHWnd?: number): number
+* findWindow (className: string, title: string, parentHWnd?: number): number | undefined
     > 增强了原生findWindow的功能，你可以直接传入一个父窗口句柄来查找子窗口句柄
 * enumWindow (className: string, title: string, filter: number, parentHWnd = 0): number[]
 * getWindow (hWnd: number, flag: [GetWindowFlag](types/types.d.ts#L37)): number
@@ -74,7 +74,7 @@ console.log(dm.dll.ver())
 ### 图色
 * capture (x1: number, y1: number, x2: number, y2: number, fileName: string)
 * findPic (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11) | undefined
-* findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11)[] | undefined
+* findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11)[]
 * getColor (x: number, y: number): string
 * getColorNum (x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number
 * findColor (x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: [FindDir](types/types.d.ts#L22)): [Coordinate](types/types.d.ts#L1) | undefined
