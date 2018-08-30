@@ -92,12 +92,13 @@ export = {
   keyUp (keyCode: number): DmRet {
     return dm.KeyUp(keyCode)
   },
-  findWindow (className: string, title: string, parentHWnd?: number): number {
-    return parentHWnd ? dm.EnumWindow(parentHWnd, title, className, 3) / 1 : dm.FindWindow(className, title)
+  findWindow (className: string, title: string, parentHWnd?: number): number | undefined {
+    const hWnd = parentHWnd ? this.enumWindow(className, title, 3, parentHWnd)[0] : dm.FindWindow(className, title)
+    if (hWnd) return hWnd
   },
   enumWindow (className: string, title: string, filter: number, parentHWnd = 0): number[] {
     const wins: string = dm.EnumWindow(parentHWnd, title, className, filter)
-    return wins.split(',').map(hWnd => Number(hWnd))
+    return wins.length > 0 ? wins.split(',').map(hWnd => Number(hWnd)) : []
   },
   getWindow (hWnd: number, flag: GetWindowFlag): number {
     return dm.GetWindow(hWnd, flag)
@@ -149,7 +150,7 @@ export = {
       }
     }
   },
-  findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[] | undefined {
+  findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[] {
     const ret = dm.FindPicEx(x1, y1, x2, y2, picName, deltaColor, sim, dir)
     if (ret.length > 0) {
       return ret
@@ -158,7 +159,7 @@ export = {
           const [index, x, y] = pic.split(',')
           return { index: Number(index), x: Number(x), y: Number(y) }
         })
-    }
+    } else return []
   },
   getColor (x: number, y: number): string {
     return dm.GetColor(x, y)
@@ -199,4 +200,3 @@ export = {
     }
   }
 }
-
