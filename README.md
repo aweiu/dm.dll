@@ -46,6 +46,7 @@ console.log(dm.dll.ver())
 * getPointWindow (x: number, y: number): number
 * getClientSize (hWnd: number): [Size](types/types.d.ts#L14)
 * moveWindow (hWnd: number, x: number, y: number): [DmRet](types/types.d.ts#L18)
+* setWindowSize (hWnd: number, width: number, height: number): [DmRet](types/types.d.ts#L18)
 * setWindowState (hWnd: number, state: [WindowState](types/types.d.ts#L47)): [DmRet](types/types.d.ts#L18)
 * sendPaste (hWnd: number): [DmRet](types/types.d.ts#L18)
 * sendString (hWnd: number, content: string): [DmRet](types/types.d.ts#L18)
