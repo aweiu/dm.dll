@@ -23,7 +23,7 @@ declare const _default: {
     keyPress(keyCode: number): DmRet;
     keyDown(keyCode: number): DmRet;
     keyUp(keyCode: number): DmRet;
-    findWindow(className: string, title: string, parentHWnd?: number | undefined): number;
+    findWindow(className: string, title: string, parentHWnd?: number | undefined): number | undefined;
     enumWindow(className: string, title: string, filter: number, parentHWnd?: number): number[];
     getWindow(hWnd: number, flag: GetWindowFlag): number;
     getPointWindow(x: number, y: number): number;
@@ -36,7 +36,7 @@ declare const _default: {
     bindWindow(hWnd: number, display: DisplayType, mouse: MouseType, keypad: KeypadType, mode: 0 | 2 | 4): DmRet;
     capture(x1: number, y1: number, x2: number, y2: number, fileName: string): any;
     findPic(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet | undefined;
-    findPicEx(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[] | undefined;
+    findPicEx(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[];
     getColor(x: number, y: number): string;
     getColorNum(x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number;
     findColor(x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: FindDir): Coordinate | undefined;

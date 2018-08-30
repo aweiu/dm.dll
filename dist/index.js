@@ -72,11 +72,13 @@ module.exports = {
         return dm.KeyUp(keyCode);
     },
     findWindow(className, title, parentHWnd) {
-        return parentHWnd ? dm.EnumWindow(parentHWnd, title, className, 3) / 1 : dm.FindWindow(className, title);
+        const hWnd = parentHWnd ? this.enumWindow(className, title, 3, parentHWnd)[0] : dm.FindWindow(className, title);
+        if (hWnd)
+            return hWnd;
     },
     enumWindow(className, title, filter, parentHWnd = 0) {
         const wins = dm.EnumWindow(parentHWnd, title, className, filter);
-        return wins.split(',').map(hWnd => Number(hWnd));
+        return wins.length > 0 ? wins.split(',').map(hWnd => Number(hWnd)) : [];
     },
     getWindow(hWnd, flag) {
         return dm.GetWindow(hWnd, flag);
@@ -138,6 +140,8 @@ module.exports = {
                 return { index: Number(index), x: Number(x), y: Number(y) };
             });
         }
+        else
+            return [];
     },
     getColor(x, y) {
         return dm.GetColor(x, y);
