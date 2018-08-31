@@ -135,6 +135,9 @@ export = {
   bindWindow (hWnd: number, display: DisplayType, mouse: MouseType, keypad: KeypadType, mode: 0 | 2 | 4): DmRet {
     return dm.BindWindow(hWnd, display, mouse, keypad, mode)
   },
+  unBindWindow (): DmRet {
+    return dm.UnBindWindow()
+  },
   capture (x1: number, y1: number, x2: number, y2: number, fileName: string) {
     return dm.Capture(x1, y1, x2, y2, fileName)
   },
