@@ -53,6 +53,7 @@ console.log(dm.dll.ver())
 
 ### 后台
 * bindWindow (hWnd: number, display: [DisplayType](types/index.d.ts#L2), mouse: [MouseType](types/index.d.ts#L3), keypad: [KeypadType](types/index.d.ts#L4), mode: 0 | 2 | 4): [DmRet](types/types.d.ts#L18)
+* unBindWindow (): [DmRet](types/types.d.ts#L18)
 
 ### 键鼠
 * getCursorPos (): [Coordinate](types/types.d.ts#L1)
