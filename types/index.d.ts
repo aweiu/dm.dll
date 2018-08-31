@@ -34,6 +34,7 @@ declare const _default: {
     sendPaste(hWnd: number): DmRet;
     sendString(hWnd: number, content: string): DmRet;
     bindWindow(hWnd: number, display: DisplayType, mouse: MouseType, keypad: KeypadType, mode: 0 | 2 | 4): DmRet;
+    unBindWindow(): DmRet;
     capture(x1: number, y1: number, x2: number, y2: number, fileName: string): any;
     findPic(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet | undefined;
     findPicEx(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[];

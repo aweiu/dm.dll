@@ -115,6 +115,9 @@ module.exports = {
     bindWindow(hWnd, display, mouse, keypad, mode) {
         return dm.BindWindow(hWnd, display, mouse, keypad, mode);
     },
+    unBindWindow() {
+        return dm.UnBindWindow();
+    },
     capture(x1, y1, x2, y2, fileName) {
         return dm.Capture(x1, y1, x2, y2, fileName);
     },
