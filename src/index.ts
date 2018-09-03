@@ -170,6 +170,9 @@ export = {
   getColorNum (x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number {
     return dm.GetColorNum(x1, y1, x2, y2, color, sim)
   },
+  getAveRGB (x1: number, y1: number, x2: number, y2: number): string {
+    return dm.GetAveRGB(x1, y1, x2, y2)
+  },
   findColor (x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: FindDir): Coordinate | undefined {
     let x = new winax.Variant(-1, 'byref')
     let y = new winax.Variant(-1, 'byref')
