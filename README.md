@@ -78,6 +78,7 @@ console.log(dm.dll.ver())
 * findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11)[]
 * getColor (x: number, y: number): string
 * getColorNum (x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number
+* getAveRGB (x1: number, y1: number, x2: number, y2: number): string
 * findColor (x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: [FindDir](types/types.d.ts#L22)): [Coordinate](types/types.d.ts#L1) | undefined
 
 ### 文字识别
