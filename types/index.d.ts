@@ -40,6 +40,7 @@ declare const _default: {
     findPicEx(x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: FindPicDir): FindRet[];
     getColor(x: number, y: number): string;
     getColorNum(x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number;
+    getAveRGB(x1: number, y1: number, x2: number, y2: number): string;
     findColor(x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: FindDir): Coordinate | undefined;
     setDict(index: number, file: string): DmRet;
     findStr(x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): FindRet | undefined;

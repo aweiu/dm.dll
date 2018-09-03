@@ -152,6 +152,9 @@ module.exports = {
     getColorNum(x1, y1, x2, y2, color, sim) {
         return dm.GetColorNum(x1, y1, x2, y2, color, sim);
     },
+    getAveRGB(x1, y1, x2, y2) {
+        return dm.GetAveRGB(x1, y1, x2, y2);
+    },
     findColor(x1, y1, x2, y2, color, sim, dir) {
         let x = new winax.Variant(-1, 'byref');
         let y = new winax.Variant(-1, 'byref');
