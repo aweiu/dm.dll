@@ -13,6 +13,12 @@ function getDM() {
 }
 const dm = getDM();
 let mouseRange;
+function setMouseRange() {
+    if (arguments.length === 4)
+        mouseRange = Array.from(arguments);
+    else
+        mouseRange = undefined;
+}
 module.exports = {
     dll: dm,
     getPath() {
@@ -33,9 +39,7 @@ module.exports = {
     getKeyState(keyCode) {
         return dm.GetKeyState(keyCode);
     },
-    setMouseRange(x1, y1, x2, y2) {
-        mouseRange = [x1, y1, x2, y2];
-    },
+    setMouseRange,
     moveTo(x, y) {
         if (mouseRange) {
             if (x < mouseRange[0])

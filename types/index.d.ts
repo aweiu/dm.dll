@@ -3,6 +3,8 @@ declare type DisplayType = 'normal' | 'gdi' | 'gdi2' | 'dx' | 'dx2' | 'dx3';
 declare type MouseType = 'normal' | 'windows' | 'windows2' | 'windows3' | 'dx' | 'dx2';
 declare type KeypadType = 'normal' | 'windows' | 'dx';
 declare type FindPicDir = FindDir.LeftToRightAndTopToBottom | FindDir.LeftToRightAndBottomToTop | FindDir.RightToLeftAndTopToBottom | FindDir.RightToLeftAndBottomToTop;
+declare function setMouseRange(): void;
+declare function setMouseRange(x1: number, y1: number, x2: number, y2: number): void;
 declare const _default: {
     dll: any;
     getPath(): string;
@@ -10,7 +12,7 @@ declare const _default: {
     setErrorDisplay(flag: ErrorDisplay): DmRet;
     getCursorPos(): Coordinate;
     getKeyState(keyCode: number): KeyState;
-    setMouseRange(x1: number, y1: number, x2: number, y2: number): void;
+    setMouseRange: typeof setMouseRange;
     moveTo(x: number, y: number): DmRet;
     leftClick(): DmRet;
     leftDoubleClick(): DmRet;
