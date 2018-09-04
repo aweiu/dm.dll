@@ -57,7 +57,7 @@ console.log(dm.dll.ver())
 
 ### 键鼠
 * setMouseRange (x1: number, y1: number, x2: number, y2: number): void
-    > 不同于dm.dll.LockMouseRect该方法只会限制moveTo的活动范围
+    > 不同于dm.dll.LockMouseRect该方法只会限制moveTo的活动范围，不传参则取消限制
 * getCursorPos (): [Coordinate](types/types.d.ts#L1)
 * getKeyState (keyCode: number): [KeyState](/types/types.d.ts#L63)
 * moveTo (x: number, y: number): [DmRet](types/types.d.ts#L18)
