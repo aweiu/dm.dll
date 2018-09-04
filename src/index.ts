@@ -33,7 +33,15 @@ function getDM () {
 }
 
 const dm = getDM()
-let mouseRange: number[]
+let mouseRange: number[] | undefined
+
+function setMouseRange (): void
+function setMouseRange (x1: number, y1: number, x2: number, y2: number): void
+function setMouseRange () {
+  if (arguments.length === 4) mouseRange = Array.from(arguments)
+  else mouseRange = undefined
+}
+
 export = {
   dll: dm,
   getPath (): string {
@@ -54,9 +62,7 @@ export = {
   getKeyState (keyCode: number): KeyState {
     return dm.GetKeyState(keyCode)
   },
-  setMouseRange (x1: number, y1: number, x2: number, y2: number) {
-    mouseRange = [x1, y1, x2, y2]
-  },
+  setMouseRange,
   moveTo (x: number, y: number): DmRet {
     if (mouseRange) {
       if (x < mouseRange[0]) x = mouseRange[0]
