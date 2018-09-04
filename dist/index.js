@@ -12,6 +12,7 @@ function getDM() {
     }
 }
 const dm = getDM();
+let mouseRange;
 module.exports = {
     dll: dm,
     getPath() {
@@ -32,7 +33,20 @@ module.exports = {
     getKeyState(keyCode) {
         return dm.GetKeyState(keyCode);
     },
+    setMouseRange(x1, y1, x2, y2) {
+        mouseRange = [x1, y1, x2, y2];
+    },
     moveTo(x, y) {
+        if (mouseRange) {
+            if (x < mouseRange[0])
+                x = mouseRange[0];
+            else if (x > mouseRange[2])
+                x = mouseRange[2];
+            if (y < mouseRange[1])
+                y = mouseRange[1];
+            else if (y > mouseRange[3])
+                y = mouseRange[3];
+        }
         return dm.MoveTo(x, y);
     },
     leftClick() {

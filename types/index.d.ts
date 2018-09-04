@@ -10,6 +10,7 @@ declare const _default: {
     setErrorDisplay(flag: ErrorDisplay): DmRet;
     getCursorPos(): Coordinate;
     getKeyState(keyCode: number): KeyState;
+    setMouseRange(x1: number, y1: number, x2: number, y2: number): void;
     moveTo(x: number, y: number): DmRet;
     leftClick(): DmRet;
     leftDoubleClick(): DmRet;
