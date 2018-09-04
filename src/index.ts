@@ -33,6 +33,7 @@ function getDM () {
 }
 
 const dm = getDM()
+let mouseRange: number[]
 export = {
   dll: dm,
   getPath (): string {
@@ -53,7 +54,16 @@ export = {
   getKeyState (keyCode: number): KeyState {
     return dm.GetKeyState(keyCode)
   },
+  setMouseRange (x1: number, y1: number, x2: number, y2: number) {
+    mouseRange = [x1, y1, x2, y2]
+  },
   moveTo (x: number, y: number): DmRet {
+    if (mouseRange) {
+      if (x < mouseRange[0]) x = mouseRange[0]
+      else if (x > mouseRange[2]) x = mouseRange[2]
+      if (y < mouseRange[1]) y = mouseRange[1]
+      else if (y > mouseRange[3]) y = mouseRange[3]
+    }
     return dm.MoveTo(x, y)
   },
   leftClick (): DmRet {
