@@ -1,4 +1,4 @@
-import { Coordinate, DmRet, ErrorDisplay, FindDir, FindRet, GetWindowFlag, KeyState, Size, WindowState } from './types';
+import { Coordinate, DmRet, ErrorDisplay, FindDir, FindRet, GetWindowFlag, KeyState, OcrRet, Size, WindowState } from './types';
 declare type DisplayType = 'normal' | 'gdi' | 'gdi2' | 'dx' | 'dx2' | 'dx3';
 declare type MouseType = 'normal' | 'windows' | 'windows2' | 'windows3' | 'dx' | 'dx2';
 declare type KeypadType = 'normal' | 'windows' | 'dx';
@@ -45,8 +45,11 @@ declare const _default: {
     getColorNum(x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number;
     getAveRGB(x1: number, y1: number, x2: number, y2: number): string;
     findColor(x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: FindDir): Coordinate | undefined;
+    getNowDict(): number;
     setDict(index: number, file: string): DmRet;
-    findStr(x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): FindRet | undefined;
+    findStr(x1: number, y1: number, x2: number, y2: number, str: string, colorFormat: string, sim: number): FindRet | undefined;
+    ocr(x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): string;
+    getWords(x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): OcrRet | undefined;
     getScreenSize(): Size;
 };
 export = _default;
