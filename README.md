@@ -34,59 +34,62 @@ console.log(dm.dll.ver())
 
 ### 基本设置
 * getPath (): string
-* setPath (path: string): [DmRet](types/types.d.ts#L18)
-* setErrorDisplay (flag: [ErrorDisplay](types/types.d.ts#L33)): [DmRet](types/types.d.ts#L18)
+* setPath (path: string): [DmRet](types/types.d.ts#L21)
+* setErrorDisplay (flag: [ErrorDisplay](types/types.d.ts#L36)): [DmRet](types/types.d.ts#L21)
     > 同大漠插件的SetShowErrorMsg
 
 ### 窗口
 * findWindow (className: string, title: string, parentHWnd?: number): number | undefined
     > 增强了原生findWindow的功能，你可以直接传入一个父窗口句柄来查找子窗口句柄
 * enumWindow (className: string, title: string, filter: number, parentHWnd = 0): number[]
-* getWindow (hWnd: number, flag: [GetWindowFlag](types/types.d.ts#L37)): number
+* getWindow (hWnd: number, flag: [GetWindowFlag](types/types.d.ts#L40)): number
 * getPointWindow (x: number, y: number): number
-* getClientSize (hWnd: number): [Size](types/types.d.ts#L14)
-* moveWindow (hWnd: number, x: number, y: number): [DmRet](types/types.d.ts#L18)
-* setWindowSize (hWnd: number, width: number, height: number): [DmRet](types/types.d.ts#L18)
-* setWindowState (hWnd: number, state: [WindowState](types/types.d.ts#L47)): [DmRet](types/types.d.ts#L18)
-* sendPaste (hWnd: number): [DmRet](types/types.d.ts#L18)
-* sendString (hWnd: number, content: string): [DmRet](types/types.d.ts#L18)
+* getClientSize (hWnd: number): [Size](types/types.d.ts#L17)
+* moveWindow (hWnd: number, x: number, y: number): [DmRet](types/types.d.ts#L21)
+* setWindowSize (hWnd: number, width: number, height: number): [DmRet](types/types.d.ts#L21)
+* setWindowState (hWnd: number, state: [WindowState](types/types.d.ts#L50)): [DmRet](types/types.d.ts#L21)
+* sendPaste (hWnd: number): [DmRet](types/types.d.ts#L21)
+* sendString (hWnd: number, content: string): [DmRet](types/types.d.ts#L21)
 
 ### 后台
-* bindWindow (hWnd: number, display: [DisplayType](types/index.d.ts#L2), mouse: [MouseType](types/index.d.ts#L3), keypad: [KeypadType](types/index.d.ts#L4), mode: 0 | 2 | 4): [DmRet](types/types.d.ts#L18)
-* unBindWindow (): [DmRet](types/types.d.ts#L18)
+* bindWindow (hWnd: number, display: [DisplayType](types/index.d.ts#L2), mouse: [MouseType](types/index.d.ts#L3), keypad: [KeypadType](types/index.d.ts#L4), mode: 0 | 2 | 4): [DmRet](types/types.d.ts#L21)
+* unBindWindow (): [DmRet](types/types.d.ts#L21)
 
 ### 键鼠
 * setMouseRange (x1: number, y1: number, x2: number, y2: number): void
     > 不同于dm.dll.LockMouseRect该方法只会限制moveTo的活动范围，不传参则取消限制
 * getCursorPos (): [Coordinate](types/types.d.ts#L1)
-* getKeyState (keyCode: number): [KeyState](/types/types.d.ts#L63)
-* moveTo (x: number, y: number): [DmRet](types/types.d.ts#L18)
-* leftClick (): [DmRet](types/types.d.ts#L18)
-* leftDoubleClick (): [DmRet](types/types.d.ts#L18)
-* leftDown (): [DmRet](types/types.d.ts#L18)
-* leftUp (): [DmRet](types/types.d.ts#L18)
-* rightClick (): [DmRet](types/types.d.ts#L18)
-* rightDown (): [DmRet](types/types.d.ts#L18)
-* rightUp (): [DmRet](types/types.d.ts#L18)
-* wheelDown (): [DmRet](types/types.d.ts#L18)
-* wheelUp (): [DmRet](types/types.d.ts#L18)
-* keyPress (keyCode: number): [DmRet](types/types.d.ts#L18)
-* keyDown (keyCode: number): [DmRet](types/types.d.ts#L18)
-* keyUp (keyCode: number): [DmRet](types/types.d.ts#L18)
+* getKeyState (keyCode: number): [KeyState](/types/types.d.ts#L66)
+* moveTo (x: number, y: number): [DmRet](types/types.d.ts#L21)
+* leftClick (): [DmRet](types/types.d.ts#L21)
+* leftDoubleClick (): [DmRet](types/types.d.ts#L21)
+* leftDown (): [DmRet](types/types.d.ts#L21)
+* leftUp (): [DmRet](types/types.d.ts#L21)
+* rightClick (): [DmRet](types/types.d.ts#L21)
+* rightDown (): [DmRet](types/types.d.ts#L21)
+* rightUp (): [DmRet](types/types.d.ts#L21)
+* wheelDown (): [DmRet](types/types.d.ts#L21)
+* wheelUp (): [DmRet](types/types.d.ts#L21)
+* keyPress (keyCode: number): [DmRet](types/types.d.ts#L21)
+* keyDown (keyCode: number): [DmRet](types/types.d.ts#L21)
+* keyUp (keyCode: number): [DmRet](types/types.d.ts#L21)
 
 ### 图色
 * capture (x1: number, y1: number, x2: number, y2: number, fileName: string)
-* findPic (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11) | undefined
-* findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L11)[]
+* findPic (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L5) | undefined
+* findPicEx (x1: number, y1: number, x2: number, y2: number, picName: string, deltaColor: string, sim: number, dir: [FindPicDir](types/index.d.ts#L5)): [FindRet](types/types.d.ts#L5)[]
 * getColor (x: number, y: number): string
 * getColorNum (x1: number, y1: number, x2: number, y2: number, color: string, sim: number): number
 * getAveRGB (x1: number, y1: number, x2: number, y2: number): string
-* findColor (x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: [FindDir](types/types.d.ts#L22)): [Coordinate](types/types.d.ts#L1) | undefined
+* findColor (x1: number, y1: number, x2: number, y2: number, color: string, sim: number, dir: [FindDir](types/types.d.ts#L25)): [Coordinate](types/types.d.ts#L1) | undefined
 
 ### 文字识别
-* setDict (index: number, file: string): [DmRet](types/types.d.ts#L18)
-* findStr (x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): [FindRet](types/types.d.ts#L11) | undefined
+* getNowDict (): number
+* setDict (index: number, file: string): [DmRet](types/types.d.ts#L21)
+* findStr (x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): [FindRet](types/types.d.ts#L5) | undefined
+* ocr (x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): string
+* getWords (x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): [OcrRet](types/types.d.ts#L8) | undefined
 
 ### 系统
-* getScreenSize (): [Size](types/types.d.ts#L14)
+* getScreenSize (): [Size](types/types.d.ts#L17)
     > 获取屏幕大小，该函数合并了GetScreenWidth和GetScreenHeight
