@@ -9,6 +9,7 @@ import {
   FindRet,
   GetWindowFlag,
   KeyState,
+  OcrRet,
   Size,
   WindowState
 } from './types'
@@ -200,18 +201,35 @@ export = {
       }
     }
   },
+  getNowDict (): number {
+    return dm.GetNowDict()
+  },
   setDict (index: number, file: string): DmRet {
     return dm.SetDict(index, file)
   },
-  findStr (x1: number, y1: number, x2: number, y2: number, string: string, colorFormat: string, sim: number): FindRet | undefined {
+  findStr (x1: number, y1: number, x2: number, y2: number, str: string, colorFormat: string, sim: number): FindRet | undefined {
     let x = new winax.Variant(-1, 'byref')
     let y = new winax.Variant(-1, 'byref')
-    const index = dm.FindStr(x1, y1, x2, y2, string, colorFormat, sim, x, y)
+    const index = dm.FindStr(x1, y1, x2, y2, str, colorFormat, sim, x, y)
     if (index !== -1) {
       return {
         index,
         x: Number(x),
         y: Number(y)
+      }
+    }
+  },
+  ocr (x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): string {
+    return dm.Ocr(x1, y1, x2, y2, colorFormat, sim)
+  },
+  getWords (x1: number, y1: number, x2: number, y2: number, colorFormat: string, sim: number): OcrRet | undefined {
+    const words = dm.GetWords(x1, y1, x2, y2, colorFormat, sim)
+    if (words.length > 0) {
+      const info = words.split('|')
+      return {
+        x: Number(info[0]),
+        y: Number(info[1]),
+        words: info[2]
       }
     }
   },

@@ -7,6 +7,10 @@ export interface FindRet extends Coordinate {
   index: number
 }
 
+export interface OcrRet extends Coordinate {
+  words: string
+}
+
 export interface Area {
   x1: number,
   y1: number,
