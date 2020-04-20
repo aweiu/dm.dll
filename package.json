@@ -1,6 +1,6 @@
 {
   "name": "dm.dll",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "JS版按键精灵(大漠插件)",
   "keywords": [
     "robot",
@@ -22,16 +22,13 @@
   "author": "aweiu",
   "license": "ISC",
   "dependencies": {
-    "winax": "^1.0.13"
+    "winax": "^1.18.0"
   },
   "devDependencies": {
     "@types/node": "^10.3.0",
     "tslint": "^5.10.0",
     "tslint-config-standard": "^7.0.0",
     "typescript": "^2.9.1"
-  },
-  "engines": {
-    "node": "<=10.8.0"
   },
   "os": [
     "win32"
